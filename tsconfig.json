@@ -20,7 +20,10 @@
     "module": "ES2022",
     "useDefineForClassFields": false,
     "lib": ["ES2022", "dom"],
-    "types": ["jest"]
+    "types": ["jest"],
+    "paths": {
+      "@app/ui/theme/layout": ["src/app/ui/theme/layout/index.ts"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
