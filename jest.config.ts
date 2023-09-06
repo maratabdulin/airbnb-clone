@@ -13,7 +13,9 @@ const config: Config = {
     "jest-preset-angular/build/serializers/html-comment",
   ],
   testRunner: "jest-jasmine2",
-  moduleNameMapper: {},
+  moduleNameMapper: {
+    "@app/ui/theme/layout": ["<rootDir>/src/app/ui/theme/layout/index.ts"],
+  },
 };
 
 export default config;
