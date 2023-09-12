@@ -15,6 +15,7 @@ const config: Config = {
   testRunner: "jest-jasmine2",
   moduleNameMapper: {
     "@app/ui/theme/layout": ["<rootDir>/src/app/ui/theme/layout/index.ts"],
+    "@app/ui/icons": ["<rootDir>/src/app/ui/icons/index.ts"],
   },
 };
 
