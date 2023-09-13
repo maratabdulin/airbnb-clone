@@ -1,15 +1,22 @@
-import { ComponentFixture, TestBed } from "@angular/core/testing";
+import { ComponentFixture, TestBed, waitForAsync } from "@angular/core/testing";
 
-import { FooterComponent } from "src/app/ui/theme/layout/modules/footer/components/footer.component";
+import { FooterComponent } from "./footer.component";
+import { MatButtonModule } from "@angular/material/button";
+import { MockModule } from "ng-mocks";
+import { IconsModule } from "@app/ui/icons";
 
 describe("FooterComponent", () => {
   let component: FooterComponent;
   let fixture: ComponentFixture<FooterComponent>;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
+  beforeEach(waitForAsync(() => {
+    void TestBed.configureTestingModule({
+      imports: [MatButtonModule, MockModule(IconsModule)],
       declarations: [FooterComponent],
-    });
+    }).compileComponents();
+  }));
+
+  beforeEach(() => {
     fixture = TestBed.createComponent(FooterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

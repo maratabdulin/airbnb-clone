@@ -1,11 +1,11 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
-
-import { LayoutComponent } from "src/app/ui/theme/layout/components/layout.component";
 import { RouterTestingModule } from "@angular/router/testing";
 import { MockComponents } from "ng-mocks";
-import { HeaderComponent } from "src/app/ui/theme/layout/modules/header/components/header.component";
-import { FooterComponent } from "src/app/ui/theme/layout/modules/footer/components/footer.component";
-import { MainComponent } from "src/app/ui/theme/layout/modules/main/components/main.component";
+
+import { LayoutComponent } from "./layout.component";
+import { HeaderComponent } from "./../modules/header/components/header.component";
+import { FooterComponent } from "./../modules/footer/components/footer.component";
+import { MainComponent } from "./../modules/main/components/main.component";
 
 describe("LayoutComponent", () => {
   let component: LayoutComponent;
