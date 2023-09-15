@@ -19,6 +19,9 @@ const config: Config = {
     "@app/core/common": ["<rootDir>/src/app/core/common/index.ts"],
     "@app/core/logger": ["<rootDir>/src/app/core/logger/index.ts"],
     "@app/core/testing": ["<rootDir>/src/app/core/testing/index.ts"],
+    "@app/core/storage": ["<rootDir>/src/app/core/storage/index.ts"],
+    "@app/rooms/common": ["<rootDir>/src/app/rooms/common/index.ts"],
+    "@app/rooms/storage": ["<rootDir>/src/app/rooms/storage/index.ts"],
   },
 };
 
