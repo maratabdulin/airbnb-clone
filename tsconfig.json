@@ -33,6 +33,8 @@
       "@app/rooms/storage": ["src/app/rooms/storage/index.ts"],
       "@app/buildings/common": ["src/app/buildings/common/index.ts"],
       "@app/buildings/storage": ["src/app/buildings/storage/index.ts"],
+      "@app/persons/common": ["src/app/persons/common/index.ts"],
+      "@app/persons/storage": ["src/app/persons/storage/index.ts"]
     }
   },
   "angularCompilerOptions": {

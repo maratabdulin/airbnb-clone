@@ -1,0 +1,70 @@
+import { map, Observable } from "rxjs";
+import { Injectable } from "@angular/core";
+
+import { PersonDto, PersonEntity } from "@app/persons/common";
+import { LocalStorage } from "@app/core/storage";
+
+import { PERSONS_DTO_STUB } from "./person.stub";
+
+const PERSON_STORAGE_KEY = "persons";
+
+export function castPersonEntity(personDto: PersonDto): PersonEntity {
+  return {
+    ...personDto,
+    personRemoveRun: false,
+    personRemoveError: null,
+    personChangeRun: false,
+    personChangeError: null,
+    personBuildingAddRun: false,
+    personBuildingAddError: null,
+    personBuildingRemoveRun: false,
+    personBuildingRemoveError: null,
+  };
+}
+
+export function castPersonDto<T extends PersonEntity = PersonEntity>({
+  id,
+  created,
+  updated,
+  firstName,
+  lastName,
+  middleName,
+  phone,
+  buildings,
+  avatar,
+}: T): PersonDto {
+  return {
+    id,
+    created,
+    updated,
+    firstName,
+    lastName,
+    middleName,
+    phone,
+    buildings,
+    avatar,
+  };
+}
+
+@Injectable()
+export class PersonStorage {
+  constructor(private readonly localStorage: LocalStorage) {}
+
+  clear(): void {
+    this.localStorage.setItem(PERSON_STORAGE_KEY, []);
+  }
+
+  get(): Observable<PersonEntity[]> {
+    return this.localStorage
+      .getItem<PersonDto[] | null>(PERSON_STORAGE_KEY)
+      .pipe(map((rooms) => (rooms ?? PERSONS_DTO_STUB).map(castPersonEntity)));
+  }
+
+  post(rooms: PersonEntity[] | null): void {
+    this.localStorage.setItem(PERSON_STORAGE_KEY, rooms?.map(castPersonDto));
+  }
+
+  reset(): void {
+    this.localStorage.setItem(PERSON_STORAGE_KEY, PERSONS_DTO_STUB);
+  }
+}
