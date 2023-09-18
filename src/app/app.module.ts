@@ -4,15 +4,18 @@ import { BrowserModule } from "@angular/platform-browser";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { LayoutModule } from "src/app/ui/theme/layout/layout.module";
 import { RootStoreModule } from "src/app/core/store/root";
+import { AppLocaleModule } from "src/app/app-locale.moutle";
+import { HttpClientJsonpModule, HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    LayoutModule,
+    AppLocaleModule,
+    HttpClientModule,
+    HttpClientJsonpModule,
     RootStoreModule,
   ],
   declarations: [AppComponent],

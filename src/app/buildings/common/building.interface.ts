@@ -23,7 +23,7 @@ export interface BuildingEntity {
   created: string;
   updated: string;
   lat: number;
-  lng: string;
+  lng: number;
 
   buildingRemoveRun: boolean;
   buildingRemoveError: Record<string, any> | null;
