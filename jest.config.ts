@@ -30,6 +30,7 @@ const config: Config = {
     "@app/buildings/state": ["<rootDir>/src/app/buildings/state/index.ts"],
     "@app/persons/common": ["<rootDir>/src/app/persons/common/index.ts"],
     "@app/persons/storage": ["<rootDir>/src/app/persons/storage/index.ts"],
+    "@app/persons/state": ["<rootDir>/src/app/persons/state/index.ts"],
   },
 };
 
