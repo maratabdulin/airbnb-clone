@@ -28,6 +28,7 @@ const config: Config = {
     "@app/rooms/state": ["<rootDir>/src/app/rooms/state/index.ts"],
     "@app/buildings/common": ["<rootDir>/src/app/buildings/common/index.ts"],
     "@app/buildings/storage": ["<rootDir>/src/app/buildings/storage/index.ts"],
+    "@app/buildings/service": ["<rootDir>/src/app/buildings/service/index.ts"],
     "@app/buildings/state": ["<rootDir>/src/app/buildings/state/index.ts"],
     "@app/persons/common": ["<rootDir>/src/app/persons/common/index.ts"],
     "@app/persons/storage": ["<rootDir>/src/app/persons/storage/index.ts"],
