@@ -1,0 +1,3 @@
+<ng-container *ngIf="rooms$ | async as rooms">
+  <p *ngFor="let room of rooms">{{ room.id }}, guests {{ room.guests }}</p>
+</ng-container>

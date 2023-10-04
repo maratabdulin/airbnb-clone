@@ -34,6 +34,7 @@ const config: Config = {
     "@app/persons/storage": ["<rootDir>/src/app/persons/storage/index.ts"],
     "@app/persons/service": ["<rootDir>/src/app/persons/service/index.ts"],
     "@app/persons/state": ["<rootDir>/src/app/persons/state/index.ts"],
+    "@app/booking/page": ["<rootDir>/src/app/booking/page/index.ts"],
   },
 };
 
