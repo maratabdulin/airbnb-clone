@@ -17,6 +17,7 @@ const config: Config = {
     "@app/ui/theme/layout": ["<rootDir>/src/app/ui/theme/layout/index.ts"],
     "@app/ui/icons": ["<rootDir>/src/app/ui/icons/index.ts"],
     "@app/core/common": ["<rootDir>/src/app/core/common/index.ts"],
+    "@app/core/config": ["<rootDir>/src/app/core/config/index.ts"],
     "@app/core/logger": ["<rootDir>/src/app/core/logger/index.ts"],
     "@app/core/testing": ["<rootDir>/src/app/core/testing/index.ts"],
     "@app/core/storage": ["<rootDir>/src/app/core/storage/index.ts"],
@@ -34,7 +35,13 @@ const config: Config = {
     "@app/persons/storage": ["<rootDir>/src/app/persons/storage/index.ts"],
     "@app/persons/service": ["<rootDir>/src/app/persons/service/index.ts"],
     "@app/persons/state": ["<rootDir>/src/app/persons/state/index.ts"],
+    "@app/booking/common": ["<rootDir>/src/app/booking/common/index.ts"],
+    "@app/booking/service": ["<rootDir>/src/app/booking/service/index.ts"],
+    "@app/booking/state": ["<rootDir>/src/app/booking/state/index.ts"],
     "@app/booking/page": ["<rootDir>/src/app/booking/page/index.ts"],
+    "@app/maps/common": ["<rootDir>/src/app/maps/common/index.ts"],
+    "@app/maps/service": ["<rootDir>/src/app/maps/service/index.ts"],
+    "@app/maps/shared": ["<rootDir>/src/app/maps/shared/index.ts"],
   },
 };
 

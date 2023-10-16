@@ -26,6 +26,7 @@
       "@app/ui/theme/layout": ["src/app/ui/theme/layout/index.ts"],
       "@app/ui/icons": ["src/app/ui/icons/index.ts"],
       "@app/core/common": ["src/app/core/common/index.ts"],
+      "@app/core/config": ["src/app/core/config/index.ts"],
       "@app/core/logger": ["src/app/core/logger/index.ts"],
       "@app/core/testing": ["src/app/core/testing/index.ts"],
       "@app/core/storage": ["src/app/core/storage/index.ts"],
@@ -43,7 +44,13 @@
       "@app/persons/storage": ["src/app/persons/storage/index.ts"],
       "@app/persons/service": ["src/app/persons/service/index.ts"],
       "@app/persons/state": ["src/app/persons/state/index.ts"],
+      "@app/booking/common": ["src/app/booking/common/index.ts"],
+      "@app/booking/service": ["src/app/booking/service/index.ts"],
+      "@app/booking/state": ["src/app/booking/state/index.ts"],
       "@app/booking/page": ["src/app/booking/page/index.ts"],
+      "@app/maps/common": ["src/app/maps/common/index.ts"],
+      "@app/maps/service": ["src/app/maps/service/index.ts"],
+      "@app/maps/shared": ["src/app/maps/shared/index.ts"],
     }
   },
   "angularCompilerOptions": {

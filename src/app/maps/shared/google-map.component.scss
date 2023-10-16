@@ -1,0 +1,44 @@
+@use "@angular/material" as mat;
+@import "src/stylesheets/utils";
+
+:host {
+  ::ng-deep .google-map-marker {
+    padding: 0.3rem;
+    background-color: white;
+    color: $color-default !important;
+    border: 1.5px solid mat.get-color-from-palette(mat.$gray-palette, 500);
+    border-radius: 1.5rem;
+    min-width: 4rem;
+
+    &:after {
+      content: " €";
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  ::ng-deep .gm-style .gm-style-iw-c {
+    padding: 1.1rem;
+    max-width: 14rem !important;
+  }
+
+  @include media-breakpoint-up(md) {
+    ::ng-deep .gm-style .gm-style-iw-c {
+      max-width: inherit !important;
+    }
+  }
+}
+
+.google-map {
+  display: block;
+  height: 100%;
+
+  ::ng-deep .map-container {
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 100%;
+    width: 100% !important;
+  }
+}
