@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 import { ComponentFixture, TestBed, waitForAsync } from "@angular/core/testing";
 
-import { CarouselComponentPo } from "./carousel-dots.po";
+import { CarouselDotsComponentPo } from "./carousel-dots.po";
 import { CarouselDotsComponent } from "./carousel-dots.component";
 import spyOn = jest.spyOn;
 
@@ -16,7 +16,7 @@ export class WrapperComponent {
 }
 
 describe("CarouselDotsComponent", () => {
-  let pageObject: CarouselComponentPo;
+  let pageObject: CarouselDotsComponentPo;
   let fixtureWrapper: ComponentFixture<WrapperComponent>;
 
   beforeEach(waitForAsync(() => {
@@ -27,7 +27,7 @@ describe("CarouselDotsComponent", () => {
 
   beforeEach(() => {
     fixtureWrapper = TestBed.createComponent(WrapperComponent);
-    pageObject = new CarouselComponentPo(fixtureWrapper);
+    pageObject = new CarouselDotsComponentPo(fixtureWrapper);
   });
 
   it("should create", () => {
@@ -40,5 +40,15 @@ describe("CarouselDotsComponent", () => {
     expect(pageObject.carouselDotsItem.length).toBe(
       fixtureWrapper.componentInstance.counts,
     );
+  });
+
+  it("should call selected", () => {
+    const selected = spyOn(
+      pageObject.carouselDots?.componentInstance.selected,
+      "emit",
+    );
+    fixtureWrapper.detectChanges();
+    pageObject.triggerCarouselDotsFirstClick();
+    expect(selected).toBeCalledWith(0);
   });
 });

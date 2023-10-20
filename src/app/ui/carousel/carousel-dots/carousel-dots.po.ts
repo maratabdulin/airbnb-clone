@@ -8,7 +8,7 @@ enum CarouselDotsAutomation {
   CarouselDotsItem = "carousel-dots-item",
 }
 
-export class CarouselComponentPo extends PageObject<WrapperComponent> {
+export class CarouselDotsComponentPo extends PageObject<WrapperComponent> {
   get carouselDots(): DebugElement | null {
     return this.getByAutomationId(CarouselDotsAutomation.CarouselDots);
   }
