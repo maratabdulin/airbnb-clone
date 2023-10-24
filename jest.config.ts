@@ -19,6 +19,7 @@ const config: Config = {
     "@app/ui/icons": ["<rootDir>/src/app/ui/icons/index.ts"],
     "@app/ui/grid": ["<rootDir>/src/app/ui/grid/index.ts"],
     "@app/ui/theme/layout": ["<rootDir>/src/app/ui/theme/layout/index.ts"],
+    "@app/ui/theme/utils": ["<rootDir>/src/app/ui/theme/utils/index.ts"],
     "@app/ui/shared": ["<rootDir>/src/app/ui/shared/index.ts"],
     "@app/ui/spinner": ["<rootDir>/src/app/ui/spinner/index.ts"],
     "@app/core/common": ["<rootDir>/src/app/core/common/index.ts"],

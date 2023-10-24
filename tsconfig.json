@@ -28,6 +28,7 @@
       "@app/ui/icons": ["src/app/ui/icons/index.ts"],
       "@app/ui/grid": ["src/app/ui/grid/index.ts"],
       "@app/ui/theme/layout": ["src/app/ui/theme/layout/index.ts"],
+      "@app/ui/theme/utils": ["src/app/ui/theme/utils/index.ts"],
       "@app/ui/shared": ["src/app/ui/shared/index.ts"],
       "@app/ui/spinner": ["src/app/ui/spinner/index.ts"],
       "@app/core/common": ["src/app/core/common/index.ts"],
@@ -55,7 +56,7 @@
       "@app/booking/page": ["src/app/booking/page/index.ts"],
       "@app/maps/common": ["src/app/maps/common/index.ts"],
       "@app/maps/service": ["src/app/maps/service/index.ts"],
-      "@app/maps/shared": ["src/app/maps/shared/index.ts"],
+      "@app/maps/shared": ["src/app/maps/shared/index.ts"]
     }
   },
   "angularCompilerOptions": {
