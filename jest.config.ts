@@ -31,6 +31,9 @@ const config: Config = {
     "@app/core/navigation/common": [
       "<rootDir>/src/app/core/navigation/common/index.ts",
     ],
+    "@app/core/navigation/shared": [
+      "<rootDir>/src/app/core/navigation/shared/index.ts",
+    ],
     "@app/core/testing": ["<rootDir>/src/app/core/testing/index.ts"],
     "@app/core/storage": ["<rootDir>/src/app/core/storage/index.ts"],
     "@app/core/store/utils": ["<rootDir>/src/app/core/store/utils/index.ts"],

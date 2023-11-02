@@ -40,6 +40,9 @@
       "@app/core/navigation/common": [
         "src/app/core/navigation/common/index.ts"
       ],
+      "@app/core/navigation/shared": [
+        "src/app/core/navigation/shared/index.ts"
+      ],
       "@app/core/testing": ["src/app/core/testing/index.ts"],
       "@app/core/storage": ["src/app/core/storage/index.ts"],
       "@app/core/store/utils": ["src/app/core/store/utils/index.ts"],

@@ -1,0 +1,39 @@
+<app-row mode="lg" *ngIf="bookingVariant">
+  <app-column [modes]="{ lg: 5 }">
+    <app-carousel
+      automation-id="booking-portlet-carousel"
+      class="booking-portlet-carousel"
+      [images]="bookingVariant | bookingVariantImages"
+      (selected)="onSelected()"
+    ></app-carousel>
+  </app-column>
+  <app-column [modes]="{ lg: 7 }">
+    <div class="booking-portlet-content">
+      <h4 class="booking-portlet-title" automation-id="booking-portlet-title">
+        {{ bookingVariant.name }}
+      </h4>
+      <div
+        class="booking-portlet-address"
+        automation-id="booking-portlet-address"
+      >
+        <strong>Address</strong>: {{ bookingVariant.address }}
+      </div>
+      <div class="booking-portlet-price" automation-id="booking-portlet-price">
+        <strong>Price per night</strong>:
+        {{ bookingVariant.firstRoom?.price }} €
+      </div>
+      <div class="booking-portlet-action">
+        <a
+          mat-raised-button
+          color="primary"
+          automation-id="booking-portlet-action"
+          [routerLink]="
+            NavigationPath.ROOM_PAGE
+              | navPath: { id: bookingVariant.firstRoom?.id }
+          "
+          >More details</a
+        >
+      </div>
+    </div>
+  </app-column>
+</app-row>
