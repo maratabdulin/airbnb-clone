@@ -7,7 +7,7 @@ import { NavigationPath } from "@app/core/navigation/common";
 import { NavigationService } from "@app/core/navigation/service";
 
 @Component({
-  selector: "app-booking-cox",
+  selector: "app-booking-box",
   templateUrl: "booking-box.component.html",
   styleUrls: ["booking-box.component.scss"],
 })

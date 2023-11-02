@@ -1,9 +1,14 @@
-import { ChangeDetectionStrategy, Component, OnInit } from "@angular/core";
-import { Observable } from "rxjs";
+import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+  OnDestroy,
+  OnInit,
+} from "@angular/core";
+import { Subject, takeUntil, tap } from "rxjs";
+import { BreakpointObserver } from "@angular/cdk/layout";
 
-import { RoomFacade } from "@app/rooms/state";
-import { RoomService } from "@app/rooms/service";
-import { Room } from "@app/rooms/common";
+import { GridBreakpointType, mediaBreakpointUp } from "@app/ui/theme/utils";
 
 @Component({
   selector: "app-booking-page",
@@ -11,15 +16,36 @@ import { Room } from "@app/rooms/common";
   styleUrls: ["./booking-page.component.scss"],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class BookingPageComponent implements OnInit {
-  rooms$!: Observable<Room[]>;
+export class BookingPageComponent implements OnInit, OnDestroy {
+  isDesktopScreen = false;
+  isMapShown = true;
+
+  private readonly destroy$ = new Subject<void>();
+
   constructor(
-    private readonly roomFacade: RoomFacade,
-    private readonly roomService: RoomService,
+    private readonly changeDetectorRef: ChangeDetectorRef,
+    private readonly breakpointObserver: BreakpointObserver,
   ) {}
 
-  ngOnInit() {
-    this.roomFacade.load();
-    this.rooms$ = this.roomService.rooms$;
+  ngOnInit(): void {
+    this.breakpointObserver
+      .observe(mediaBreakpointUp(GridBreakpointType.Md))
+      .pipe(
+        tap((breakpoints) => {
+          this.isDesktopScreen = breakpoints.matches;
+          this.changeDetectorRef.markForCheck();
+        }),
+        takeUntil(this.destroy$),
+      )
+      .subscribe();
+  }
+
+  ngOnDestroy() {
+    this.destroy$.next();
+    this.destroy$.complete();
+  }
+
+  onToggleView(): void {
+    this.isMapShown = !this.isMapShown;
   }
 }
