@@ -1,0 +1,12 @@
+<ng-container *ngIf="mapMarkers$ | async as mapMarkers">
+  <app-google-map
+    automation-id="booking-map-google"
+    [options]="options"
+    [markerOptions]="markerOptions"
+    [markers]="mapMarkers"
+    (mapMarkerClicked)="onMapMarkerClicked($event)"
+    (mapInfoWindowClosed)="onMapInfoWindowClosed()"
+  >
+    <ng-content></ng-content>
+  </app-google-map>
+</ng-container>
