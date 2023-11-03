@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
-import { HeaderComponent } from "src/app/ui/theme/layout/modules/header/components/header.component";
+import { HeaderComponent } from "src/app/ui/theme/layout/components/header/header.component";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";

@@ -1,13 +1,14 @@
 import { ComponentFixture, TestBed, waitForAsync } from "@angular/core/testing";
-
-import { HeaderComponent } from "./header.component";
 import { MatDialog } from "@angular/material/dialog";
 import { mock } from "ts-mockito";
 import { RouterTestingModule } from "@angular/router/testing";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
+
 import { providerOf } from "@app/core/testing";
+
+import { HeaderComponent } from "./header.component";
 
 describe("HeaderComponent", () => {
   let component: HeaderComponent;

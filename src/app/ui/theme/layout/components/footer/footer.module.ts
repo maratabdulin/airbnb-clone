@@ -5,7 +5,7 @@ import { MatIconModule } from "@angular/material/icon";
 
 import { IconsModule } from "@app/ui/icons";
 
-import { FooterComponent } from "./components/footer.component";
+import { FooterComponent } from "src/app/ui/theme/layout/components/footer/footer.component";
 
 @NgModule({
   imports: [IconsModule, MatButtonModule, HttpClientModule, MatIconModule],

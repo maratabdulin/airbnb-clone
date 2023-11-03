@@ -1,12 +1,16 @@
+import { HttpClientJsonpModule, HttpClientModule } from "@angular/common/http";
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
-
-import { AppRoutingModule } from "./app-routing.module";
-import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { StoreDevtoolsModule } from "@ngrx/store-devtools";
+
+import { ENVIRONMENTS } from "@app/core/environments";
 import { RootStoreModule } from "src/app/core/store/root";
-import { AppLocaleModule } from "src/app/app-locale.moutle";
-import { HttpClientJsonpModule, HttpClientModule } from "@angular/common/http";
+
+import { environment } from "../environments/environment";
+import { AppComponent } from "./app.component";
+import { AppLocaleModule } from "src/app/app-locale.module";
+import { AppRoutingModule } from "./app-routing.module";
 
 @NgModule({
   imports: [
@@ -17,9 +21,17 @@ import { HttpClientJsonpModule, HttpClientModule } from "@angular/common/http";
     HttpClientModule,
     HttpClientJsonpModule,
     RootStoreModule,
+    !environment.production
+      ? StoreDevtoolsModule.instrument({ logOnly: environment.production })
+      : [],
   ],
   declarations: [AppComponent],
-  providers: [],
+  providers: [
+    {
+      provide: ENVIRONMENTS,
+      useValue: environment,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

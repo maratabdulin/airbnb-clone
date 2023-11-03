@@ -3,9 +3,9 @@ import { RouterTestingModule } from "@angular/router/testing";
 import { MockComponents } from "ng-mocks";
 
 import { LayoutComponent } from "./layout.component";
-import { HeaderComponent } from "./../modules/header/components/header.component";
-import { FooterComponent } from "./../modules/footer/components/footer.component";
-import { MainComponent } from "./../modules/main/components/main.component";
+import { HeaderComponent } from "./header/header.component";
+import { FooterComponent } from "./footer/footer.component";
+import { MainComponent } from "./main/main.component";
 
 describe("LayoutComponent", () => {
   let component: LayoutComponent;

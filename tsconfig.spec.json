@@ -4,7 +4,7 @@
   "compilerOptions": {
     "outDir": "../../../dist/out-tsc",
     "module": "commonjs",
-    "types": ["jest", "node", "googlemaps", "@angular/localize"],
+    "types": ["jest", "node", "googlemaps"],
     "emitDecoratorMetadata": true
   },
   "include": ["src/**/*.spec.ts", "src/**/*.d.ts"]

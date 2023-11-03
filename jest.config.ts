@@ -2,7 +2,6 @@ import type { Config } from "jest";
 
 const config: Config = {
   preset: "jest-preset-angular",
-  setupFilesAfterEnv: ["<rootDir>/src/test-setup.ts"],
   transform: {
     "\\.(html|svg)$": "ts-jest",
   },
