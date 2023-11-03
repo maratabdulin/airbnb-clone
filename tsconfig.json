@@ -50,6 +50,7 @@
       "@app/core/environments": ["src/app/core/environments/index.ts"],
       "@app/rooms/common": ["src/app/rooms/common/index.ts"],
       "@app/rooms/storage": ["src/app/rooms/storage/index.ts"],
+      "@app/rooms/shared": ["src/app/rooms/shared/index.ts"],
       "@app/rooms/service": ["src/app/rooms/service/index.ts"],
       "@app/rooms/state": ["src/app/rooms/state/index.ts"],
       "@app/buildings/common": ["src/app/buildings/common/index.ts"],

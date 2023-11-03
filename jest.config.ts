@@ -40,6 +40,7 @@ const config: Config = {
     "@app/core/environments": ["<rootDir>/src/app/core/environments/index.ts"],
     "@app/rooms/common": ["<rootDir>/src/app/rooms/common/index.ts"],
     "@app/rooms/storage": ["<rootDir>/src/app/rooms/storage/index.ts"],
+    "@app/rooms/shared": ["<rootDir>/src/app/rooms/shared/index.ts"],
     "@app/rooms/service": ["<rootDir>/src/app/rooms/service/index.ts"],
     "@app/rooms/state": ["<rootDir>/src/app/rooms/state/index.ts"],
     "@app/buildings/common": ["<rootDir>/src/app/buildings/common/index.ts"],
