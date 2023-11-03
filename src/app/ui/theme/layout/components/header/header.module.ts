@@ -1,9 +1,10 @@
 import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
-import { HeaderComponent } from "src/app/ui/theme/layout/components/header/header.component";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
+
+import { HeaderComponent } from "./header.component";
 
 @NgModule({
   imports: [RouterModule, MatToolbarModule, MatButtonModule, MatIconModule],

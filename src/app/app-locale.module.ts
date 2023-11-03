@@ -1,7 +1,7 @@
 import { registerLocaleData } from "@angular/common";
-import localeEs from "@angular/common/locales/es";
 import { DEFAULT_CURRENCY_CODE, LOCALE_ID, NgModule } from "@angular/core";
 import { MAT_DATE_LOCALE } from "@angular/material/core";
+import localeEs from "@angular/common/locales/es";
 
 registerLocaleData(localeEs);
 

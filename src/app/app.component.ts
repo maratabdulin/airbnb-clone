@@ -2,10 +2,7 @@ import { ChangeDetectionStrategy, Component } from "@angular/core";
 
 @Component({
   selector: "app-root",
-  templateUrl: "./app.component.html",
-  styleUrls: [],
+  template: "<router-outlet></router-outlet>",
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AppComponent {
-  title = "airbnb-clone";
-}
+export class AppComponent {}

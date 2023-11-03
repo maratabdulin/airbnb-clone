@@ -36,6 +36,7 @@ const config: Config = {
     "@app/core/testing": ["<rootDir>/src/app/core/testing/index.ts"],
     "@app/core/storage": ["<rootDir>/src/app/core/storage/index.ts"],
     "@app/core/store/utils": ["<rootDir>/src/app/core/store/utils/index.ts"],
+    "@app/core/store/root": ["<rootDir>/src/app/core/store/root/index.ts"],
     "@app/core/environments": ["<rootDir>/src/app/core/environments/index.ts"],
     "@app/rooms/common": ["<rootDir>/src/app/rooms/common/index.ts"],
     "@app/rooms/storage": ["<rootDir>/src/app/rooms/storage/index.ts"],

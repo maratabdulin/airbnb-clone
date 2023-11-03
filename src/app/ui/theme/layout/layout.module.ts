@@ -1,10 +1,11 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { LayoutComponent } from "src/app/ui/theme/layout/components/layout.component";
 import { RouterLink, RouterOutlet } from "@angular/router";
-import { FooterModule } from "src/app/ui/theme/layout/components/footer/footer.module";
-import { HeaderModule } from "src/app/ui/theme/layout/components/header/header.module";
-import { MainModule } from "src/app/ui/theme/layout/components/main/main.module";
+
+import { LayoutComponent } from "./components/layout.component";
+import { FooterModule } from "./components/footer/footer.module";
+import { HeaderModule } from "./components/header/header.module";
+import { MainModule } from "./components/main/main.module";
 
 @NgModule({
   declarations: [LayoutComponent],

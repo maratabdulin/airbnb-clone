@@ -5,11 +5,11 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 
 import { ENVIRONMENTS } from "@app/core/environments";
-import { RootStoreModule } from "src/app/core/store/root";
+import { RootStoreModule } from "@app/core/store/root";
 
 import { environment } from "../environments/environment";
 import { AppComponent } from "./app.component";
-import { AppLocaleModule } from "src/app/app-locale.module";
+import { AppLocaleModule } from "./app-locale.module";
 import { AppRoutingModule } from "./app-routing.module";
 
 @NgModule({

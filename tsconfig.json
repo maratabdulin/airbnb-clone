@@ -46,6 +46,7 @@
       "@app/core/testing": ["src/app/core/testing/index.ts"],
       "@app/core/storage": ["src/app/core/storage/index.ts"],
       "@app/core/store/utils": ["src/app/core/store/utils/index.ts"],
+      "@app/core/store/root": ["src/app/core/store/root/index.ts"],
       "@app/core/environments": ["src/app/core/environments/index.ts"],
       "@app/rooms/common": ["src/app/rooms/common/index.ts"],
       "@app/rooms/storage": ["src/app/rooms/storage/index.ts"],

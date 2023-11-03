@@ -1,13 +1,11 @@
 import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
 import { StoreModule } from "@ngrx/store";
-import {
-  rootInitialState,
-  rootReducer,
-} from "src/app/core/store/root/state/state.reducer";
 import { EffectsModule } from "@ngrx/effects";
 import { StoreRouterConnectingModule } from "@ngrx/router-store";
-import { RootRouterStateSerializer } from "src/app/core/store/root/services/root-router-state-serializer.service";
+
+import { rootInitialState, rootReducer } from "./state/state.reducer";
+import { RootRouterStateSerializer } from "./services/root-router-state-serializer.service";
 
 @NgModule({
   imports: [

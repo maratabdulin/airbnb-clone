@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
-import { MainComponent } from "src/app/ui/theme/layout/components/main/main.component";
+import { MainComponent } from "./main.component";
 
 @NgModule({
   imports: [RouterModule],
