@@ -1,6 +1,7 @@
+@use "sass:math";
 @import "src/stylesheets/utils";
 
-@mixin make-columns($columnName: "column", $gutter: 1rem, $columnCount: 12) {
+@mixin make-columns($columnName: "column", $gutter: 1rem, $columnsCount: 12) {
   @each $breakpoint, $width in $grid-breakpoints {
     @media (min-width: $width) {
       &.#{$columnName}-#{$breakpoint} {
@@ -8,13 +9,17 @@
         padding: 0 $gutter;
       }
 
+      &[class*="#{$columnName}-#{$breakpoint}"] {
+        padding: 0 $gutter;
+      }
+
       &[class*="#{$columnName}-#{$breakpoint}-"] {
         flex: 0 0 auto;
       }
 
-      @for $column from 1 through $columnCount {
+      @for $column from 1 through $columnsCount {
         &.#{$columnName}-#{$breakpoint}-#{$column} {
-          width: calc($column / $columnCount);
+          width: math.percentage(math.div($column, $columnsCount));
         }
       }
     }
