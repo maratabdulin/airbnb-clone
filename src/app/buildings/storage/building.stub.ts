@@ -16,7 +16,7 @@ export const BUILDINGS_DTO_STUB: BuildingDto[] = [
   {
     id: 2,
     person: 2,
-    rooms: [2, 3],
+    rooms: [2],
     name: "Nord 1901 Hotel",
     address: "Carrer del Nord, 7",
     city: "Girona",
@@ -28,7 +28,7 @@ export const BUILDINGS_DTO_STUB: BuildingDto[] = [
   {
     id: 3,
     person: 3,
-    rooms: [4, 5],
+    rooms: [3],
     name: "Hotels Ultonia Girona",
     address: "Gran Via de Jaume I, 22",
     city: "Girona",
@@ -40,7 +40,7 @@ export const BUILDINGS_DTO_STUB: BuildingDto[] = [
   {
     id: 4,
     person: 4,
-    rooms: [6, 7],
+    rooms: [4],
     name: "Hotel Peninsular",
     address: "Av. de Sant Francesc, 6",
     city: "Girona",
@@ -52,7 +52,7 @@ export const BUILDINGS_DTO_STUB: BuildingDto[] = [
   {
     id: 5,
     person: 5,
-    rooms: [8, 9],
+    rooms: [5],
     name: "Hotel Museu Llegendes de Girona",
     address: "Carrer del Portal de la Barca, 4",
     city: "Girona",

@@ -13,10 +13,10 @@ import { BookingVariant } from "@app/booking/common";
 export class BookingMapComponent implements OnInit {
   options: google.maps.MapOptions = {
     center: {
-      lat: 41.97941407579939,
-      lng: 2.8211744335499565,
+      lat: 41.9866134977933,
+      lng: 2.823885566248715,
     },
-    zoom: 14,
+    zoom: 16,
   };
 
   mapMarkers$!: Observable<MapMarkerConfig[]>;
