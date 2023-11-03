@@ -21,7 +21,7 @@
     "module": "ES2022",
     "useDefineForClassFields": false,
     "lib": ["ES2022", "dom"],
-    "types": ["jest"],
+    "types": ["jest", "node"],
     "paths": {
       "@app/ui/carousel": ["src/app/ui/carousel/index.ts"],
       "@app/ui/container": ["src/app/ui/container/index.ts"],

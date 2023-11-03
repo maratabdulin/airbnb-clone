@@ -1,11 +1,14 @@
 import { NgModule } from "@angular/core";
-import { RouterModule } from "@angular/router";
-import { FooterComponent } from "./components/footer.component";
-import { IconsModule } from "@app/ui/icons";
 import { MatButtonModule } from "@angular/material/button";
+import { HttpClientModule } from "@angular/common/http";
+import { MatIconModule } from "@angular/material/icon";
+
+import { IconsModule } from "@app/ui/icons";
+
+import { FooterComponent } from "./components/footer.component";
 
 @NgModule({
-  imports: [RouterModule, IconsModule, MatButtonModule],
+  imports: [IconsModule, MatButtonModule, HttpClientModule, MatIconModule],
   declarations: [FooterComponent],
   exports: [FooterComponent],
 })

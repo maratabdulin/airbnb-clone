@@ -1,8 +1,7 @@
 import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { MatIconModule, MatIconRegistry } from "@angular/material/icon";
 import { DomSanitizer } from "@angular/platform-browser";
 import { HttpClientModule } from "@angular/common/http";
+import { MatIconModule, MatIconRegistry } from "@angular/material/icon";
 
 export interface IconConfig {
   name: string;
@@ -11,31 +10,31 @@ export interface IconConfig {
 
 const icons: IconConfig[] = [
   {
-    name: "appFacebook",
+    name: ":appFacebook",
     path: "assets/images/social/facebook.svg",
   },
   {
-    name: "appInstagram",
+    name: ":appInstagram",
     path: "assets/images/social/instagram.svg",
   },
   {
-    name: "appTelegram",
+    name: ":appTelegram",
     path: "assets/images/social/telegram.svg",
   },
   {
-    name: "appTwitter",
+    name: ":appTwitter",
     path: "assets/images/social/twitter.svg",
   },
   {
-    name: "appYoutube",
+    name: ":appYoutube",
     path: "assets/images/social/youtube.svg",
   },
 ];
 
 @NgModule({
-  declarations: [],
-  imports: [CommonModule, MatIconModule, HttpClientModule],
+  imports: [MatIconModule, HttpClientModule],
   exports: [MatIconModule],
+  providers: [MatIconRegistry],
 })
 export class IconsModule {
   constructor(
@@ -45,7 +44,7 @@ export class IconsModule {
     icons.forEach((icon) => this.add(icon));
   }
 
-  private add(config: IconConfig) {
+  private add(config: IconConfig): void {
     this.matIconRegistry.addSvgIcon(
       config.name,
       this.domSanitizer.bypassSecurityTrustResourceUrl(config.path),

@@ -42,7 +42,7 @@
     "@types/google.maps": "^3.54.3",
     "@types/jasmine": "~4.3.0",
     "@types/jest": "^29.5.4",
-    "@types/node": "^20.8.2",
+    "@types/node": "^20.8.10",
     "jasmine": "^5.1.0",
     "jasmine-core": "~4.6.0",
     "jasmine-marbles": "^0.9.2",
