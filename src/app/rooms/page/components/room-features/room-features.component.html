@@ -1,0 +1,61 @@
+<ng-container *ngIf="room">
+  <div class="room-feature">
+    <div class="room-feature-aside">
+      <mat-icon>home</mat-icon>
+    </div>
+    <div class="room-feature-content">
+      <div class="room-feature-title">Entire housing</div>
+      <div class="room-feature-description">
+        The apartment is completely at your disposal.
+      </div>
+    </div>
+  </div>
+
+  <div class="room-feature">
+    <div class="room-feature-aside">
+      <mat-icon>cleaning_services</mat-icon>
+    </div>
+    <div class="room-feature-content">
+      <div class="room-feature-title">Extended cleaning</div>
+      <div class="room-feature-description">
+        The owner follows an extensive cleaning protocol.
+      </div>
+    </div>
+  </div>
+
+  <div class="room-feature">
+    <div class="room-feature-aside">
+      <mat-icon>emoji_events</mat-icon>
+    </div>
+    <div class="room-feature-content">
+      <div class="room-feature-title">
+        {{ room.buildingExtended.personExtended.firstName }} - is super host
+      </div>
+      <div class="room-feature-description">
+        Superhosts are experienced, highly reviewed hosts who go above and
+        beyond to ensure guests' comfort.
+      </div>
+    </div>
+  </div>
+
+  <div class="room-feature">
+    <div class="room-feature-aside">
+      <mat-icon>list_alt</mat-icon>
+    </div>
+    <div class="room-feature-content">
+      <div class="room-feature-title">House rules</div>
+      <div class="room-feature-description">
+        Pets, parties and smoking are not allowed in the accommodation.
+      </div>
+    </div>
+  </div>
+
+  <div class="room-feature">
+    <div class="room-feature-aside">
+      <mat-icon>date_range</mat-icon>
+    </div>
+    <div class="room-feature-content">
+      <div class="room-feature-title">Free cancellation</div>
+    </div>
+  </div>
+</ng-container>
