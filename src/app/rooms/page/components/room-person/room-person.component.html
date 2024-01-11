@@ -1,0 +1,18 @@
+<div class="room-view-group">
+  <div>
+    <h3 class="room-view-person">
+      Entire apartment, owner:
+      {{ room.buildingExtended.personExtended.firstName }}
+    </h3>
+    <ng-content></ng-content>
+  </div>
+  <div>
+    <div class="room-view-avatar">
+      <img
+        class="room-view-image"
+        [src]="room.buildingExtended.personExtended.avatar"
+        alt="owner avatar"
+      />
+    </div>
+  </div>
+</div>
