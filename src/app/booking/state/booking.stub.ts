@@ -50,8 +50,8 @@ export const BOOKING_VARIANT_STUB: BookingVariant = {
 
 export const BOOKING_DETAILS_STUB: BookingDetails = {
   [BookingField.PERIOD]: {
-    [BookingField.PERIOD_START]: "2023-09-30",
-    [BookingField.PERIOD_END]: "2023-10-12",
+    [BookingField.PERIOD_START]: "2023-09-29",
+    [BookingField.PERIOD_END]: "2023-09-30",
   },
   [BookingField.GUESTS]: 1,
 };

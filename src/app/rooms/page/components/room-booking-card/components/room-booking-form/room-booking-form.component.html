@@ -1,0 +1,29 @@
+<app-room-booking-date
+  automation-id="room-booking-date"
+  [control]="form | extractFormGroup: BookingField.PERIOD"
+></app-room-booking-date>
+<app-room-booking-guest
+  automation-id="room-booking-guest"
+  [control]="form | extractFormControl: BookingField.GUESTS"
+  [room]="room"
+></app-room-booking-guest>
+<ng-content></ng-content>
+<div
+  automation-id="room-booking-error"
+  class="room-booking-error"
+  *ngIf="showError"
+>
+  Select period and quantity of guests
+</div>
+<div class="room-booking-actions">
+  <button
+    automation-id="room-booking-submit"
+    class="room-booking-action"
+    type="button"
+    mat-raised-button
+    color="warn"
+    (click)="onBooking()"
+  >
+    Make a reservation
+  </button>
+</div>
